@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 async function main() {
   const files = await fs.readdir("./src");
   files
-    .filter((file) => /\.jsx$/.test(file))
+    // .filter((file) => /\.jsx$/.test(file))
     .forEach(async (file) => {
       const output = await transformFile(`./src/${file}`, {
         sourceMaps: false,

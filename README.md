@@ -5,7 +5,7 @@
 ## System Requirements
 
 - [git][git] v2.18 or greater
-- [NodeJS][node] v18 or greater
+- [NodeJS][node] v20 or greater
 - [npm][npm] v8 or greater
 
 ## Credits

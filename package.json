@@ -20,7 +20,7 @@
     "react-server-dom-esm": "npm:@kentcdodds/tmp-react-server-dom-esm@0.0.0-experimental-2b036d3f1-20240327?pin=v126&dev"
   },
   "scripts": {
-    "dev": "npm run build & node --watch --conditions=react-server server/app.js",
+    "dev": "npm run build & node --watch --import ./server/register-rsc-loader.js --conditions=react-server server/app.js",
     "build": "node --watch-path=./src swc.js"
   }
 }
