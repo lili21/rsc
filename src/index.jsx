@@ -1,21 +1,20 @@
 import React, { startTransition, use } from "react";
 import { createRoot } from "react-dom/client";
-import App from "../dist/App.js";
-// import { createFromFetch } from "react-server-dom-esm/client";
+import { createFromFetch } from "react-server-dom-esm/client";
 
-// const initialContentFetchPromise = fetch(`/rsc`);
-// const initialContentPromise = createFromFetch(initialContentFetchPromise);
+const initialContentFetchPromise = fetch(`/rsc`);
+const initialContentPromise = createFromFetch(initialContentFetchPromise);
 
-// function Root() {
-//   const content = use(initialContentPromise);
-//   return content;
-// }
+function Root() {
+  const content = use(initialContentPromise);
+  return content;
+}
 
 startTransition(() => {
   const root = createRoot(document.getElementById("root"));
   root.render(
     <div>
-      <App />
+      <Root />
     </div>,
   );
 });

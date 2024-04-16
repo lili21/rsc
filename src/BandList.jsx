@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { getBandList } from "../server/db/band-api.js";
 
-export function BandList() {
-  const [bandList, setBandList] = useState([]);
-  useEffect(() => {
-    fetch("/api/band-list").then(async (res) => {
-      const result = await res.json();
-      setBandList(result);
-    });
-  }, []);
+export async function BandList() {
+  const bandList = await getBandList();
   return (
     <ul>
       {bandList.map((band) => (
-        <li>{band}</li>
+        <li key={band}>{band}</li>
       ))}
     </ul>
   );
