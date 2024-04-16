@@ -7,3 +7,7 @@
 - [git][git] v2.18 or greater
 - [NodeJS][node] v18 or greater
 - [npm][npm] v8 or greater
+
+## Credits
+
+- [react-server-components](https://github.com/epicweb-dev/react-server-components)
