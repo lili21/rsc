@@ -7,7 +7,7 @@ export default function App() {
     <div>
       <h1>喜爱的乐队</h1>
       <form action={addBand}>
-        <input name="name" placeholder="add favaritor band" />
+        <input name="name" placeholder="add your favorite band" />
         <button type="submit">add</button>
       </form>
       <Suspense fallback={<div>loading...</div>}>
